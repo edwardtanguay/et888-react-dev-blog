@@ -19,14 +19,14 @@ const Documentation = () => {
     <div className="mx-10">
       {/* Hier wird die Suchleiste eingefügt */}
       <input
-        className="my-10 p-2 border  rounded-l-md"
+        className="my-10 p-2 border rounded-l-md"
         type="text"
         placeholder="Search for a blog post"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
       <button
-        className="bg-slate-900 hover:bg-blue-900 border py-2 px-4 rounded-r-md text-white"
+        className="text-green-50 bg-green-900 hover:bg-green-600 transition border py-2 px-4 rounded-r-md"
         onClick={handleSearch}
       >
         Search
