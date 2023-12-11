@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import BlogPostPreview from '../components/BlogPostPreview'
 import blogData from '../data/blogData' // Stellen Sie sicher, dass der Pfad korrekt ist
+import { Routes, Route } from 'react-router-dom'
+import BlogPost from '../components/BlogPost'
 
 const Documentation = () => {
   // Zustand für die Sucheingabe und die gefilterten Blogartikel
@@ -37,6 +39,10 @@ const Documentation = () => {
           <BlogPostPreview key={post.id} post={post} />
         ))}
       </div>
+      {/* Neue Route für einzelne Blogseiten hinzufügen */}
+      <Routes>
+        <Route path="/blog/:id" element={<BlogPost />} />
+      </Routes>
     </div>
   )
 }
